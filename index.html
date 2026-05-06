@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Compliance Documenter — FINRA · SEC · SOX · PCI-DSS Code Documentation</title>
-  <meta name="description" content="Automatically generate audit-ready, regulator-grade code documentation for financial software. Trusted by compliance officers at banks, fintechs, and hedge funds." />
+  <meta name="description" content="Automatically geenerate audit-ready, regulator-grade code documentation for financial software. Trusted by compliance officers at banks, fintechs, and hedge funds." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Google+Sans+Display:wght@400;700&family=Google+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -591,12 +591,16 @@
       border-bottom: 1px solid rgba(255,255,255,.04);
     }
 
-    .frameworks-grid {
-      display:               grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:                   20px;
-    }
+.frameworks-grid {
+  display:               grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:                   20px;
+}
 
+@media (min-width: 901px) {
+  .frameworks-grid .framework-card:nth-child(5) { grid-column: 1; margin-left: 12.5%; }
+  .frameworks-grid .framework-card:nth-child(7) { margin-right: 12.5%; }
+}
     .framework-card {
       padding:      32px 28px;
       background:   var(--navy-800);
@@ -1445,7 +1449,41 @@
             <li>Requirement 10 — Audit Logs</li>
           </ul>
         </div>
+<div class="framework-card">
+          <span class="fw-badge badge-finra">GLBA</span>
+          <h3>Gramm-Leach-Bliley Act</h3>
+          <p>Requires financial institutions to protect consumers personal financial information and implement a written information security program.</p>
+          <ul class="fw-rules">
+            <li>Section 501 — Customer Data Protection</li>
+            <li>Section 502 — Opt-Out Requirements</li>
+            <li>Rule 314 — Safeguards Rule</li>
+            <li>Rule 313 — Privacy Notice Requirements</li>
+          </ul>
+        </div>
 
+        <div class="framework-card">
+          <span class="fw-badge badge-sec">CFTC</span>
+          <h3>Commodity Futures Trading Commission</h3>
+          <p>Governs derivatives, futures, and swaps trading systems. Required for hedge funds, commodity trading firms, and derivatives desks.</p>
+          <ul class="fw-rules">
+            <li>Rule 1.31 — Records Retention (5 years)</li>
+            <li>Rule 23.606 — Swap Data Reporting</li>
+            <li>Rule 23.400 — Business Conduct Standards</li>
+            <li>Rule 1.73 — Pre-Trade Risk Controls</li>
+          </ul>
+        </div>
+
+        <div class="framework-card">
+          <span class="fw-badge badge-gdpr">GDPR</span>
+          <h3>General Data Protection Regulation</h3>
+          <p>Applies to any financial firm processing personal data of EU residents. Increasingly enforced across global fintech and banking platforms.</p>
+          <ul class="fw-rules">
+            <li>Article 17 — Right to Erasure</li>
+            <li>Article 25 — Data Protection by Design</li>
+            <li>Article 32 — Security of Processing</li>
+            <li>Article 83 — Administrative Fines</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
